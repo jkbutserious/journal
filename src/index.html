@@ -7,10 +7,16 @@
   <body>
     <form id="journalEntry">
       <label for="titleField">Enter a title for your journal entry:</label>
-      <input id="titleField" type="number">
+      <input id="titleField">
       <label for="entryField">Type your journal entry here:</label>
       <textarea id="entryField" rows="5" cols="50"></textarea>
       <button type="submit">Submit</button>
     </form>
+
+    <div>
+      <p>Word Count: <span id="word-count"></span></p>
+      <p>Vowels: <span id="vowel-count"></span></p>
+      <p>Consonants: <span id="consonant-count"></span></p>
+    </div>
   </body>
 </html>

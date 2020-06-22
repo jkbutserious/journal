@@ -5,7 +5,7 @@ export function Journal (title, entry, wordCount, vowels, consonants) {
   this.wordCount = wordCount,
   this.vowels = vowels,
   this.consonants = consonants
-};
+}
 
 Journal.prototype.getWordCount = function(journalEntry, entryLength) {
   let words = [];
@@ -28,8 +28,8 @@ Journal.prototype.countVowelsAndConsonants = function(journalEntry, journalVowel
   let vowels = 0;
   let consonants = 0;
 
-  letters = toLowerCase(journalEntry).split("");
-  for (i=0; i > letters.length; i++) {
+  letters = (journalEntry.toLowerCase()).split("");
+  for (i = 0; i < letters.length; i++) {
     if (letters[i] === "a" || letters[i] === "e" || letters[i] === "i" || letters [i] === "o" || letters [i] === "u") {
       vowels += 1;
       return vowels
@@ -37,8 +37,8 @@ Journal.prototype.countVowelsAndConsonants = function(journalEntry, journalVowel
     else {
       consonants += 1;
       return consonants
-    };
-  };
+    }
+  }
   journalVowels.push(vowels);
   journalConsonants.push(consonants);
 }
