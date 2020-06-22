@@ -3,14 +3,8 @@ import './styles.css';
 import { Journal } from './journal';
 
 $(document).ready(function() {
-let usersJournal = new Journal()
-// usersJournal {
-//   title = "";
-//   entry = "";
-//   wordCount = 25;
-//   vowels = "";
-//   consonants = "";
-// }
+let usersJournal = new Journal();
+
   $("form#journalEntry").submit(function(event){
     event.preventDefault();
     const userTitle = $("input#titleField").val();
