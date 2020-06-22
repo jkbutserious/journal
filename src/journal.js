@@ -22,3 +22,23 @@ Journal.prototype.putInTitle = function (journalTitle, usersTitle){
 Journal.prototype.putInEntry = function (entryInfo, usersEntry){
   entryInfo.push(usersEntry)
 };
+
+Journal.prototype.countVowelsAndConsonants = function(journalEntry, journalVowels, journalConsonants) {
+  let letters = [];
+  let vowels = 0;
+  let consonants = 0;
+
+  letters = toLowerCase(journalEntry).split("");
+  for (i=0; i > letters.length; i++) {
+    if (letters[i] === "a" || letters[i] === "e" || letters[i] === "i" || letters [i] === "o" || letters [i] === "u") {
+      vowels += 1;
+      return vowels
+    }
+    else {
+      consonants += 1;
+      return consonants
+    };
+  };
+  journalVowels.push(vowels);
+  journalConsonants.push(consonants);
+}

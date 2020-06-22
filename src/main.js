@@ -18,5 +18,6 @@ let usersJournal = new Journal()
     usersJournal.getWordCount(userEntry, usersJournal.wordCount);
     usersJournal.putInTitle(usersJournal.title, userTitle);
     usersJournal.putInEntry(usersJournal.entry, userEntry);
+    usersJournal.countVowelsAndConsonants(userEntry, usersJournal.vowels, usersJournal.consonants);
   });
 });
